@@ -1,2 +1,2 @@
-# radial.github.io
+# info
 Landing page of Radial AV
