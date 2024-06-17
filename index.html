@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Radial - The AV Experience</title>
+    <title>Radial - Música e Arte em Sintonia</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -39,6 +39,20 @@
             background-repeat: no-repeat;
             margin: 0 auto;
         }
+        .flyer-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #000; /* Black background */
+            padding: 100px 0; /* Adjust padding for positioning */
+        }
+
+        .flyer-container {
+            max-width: 100%;
+            height: auto;
+            max-height: 1125px; /* Adjust max-height as needed */
+        }
 
         .intro {
             display: flex;
@@ -46,7 +60,7 @@
             align-items: center;
             text-align: center;
             height: 100vh;
-            background: url('./img/background.jpg') no-repeat center center;
+            background: url('./img/intro-bg.jpg') no-repeat center center;
             background-size: cover;
         }
 
@@ -63,8 +77,8 @@
             cursor: pointer;
             user-select: none;
             background-color: transparent;
-            color: #333;
-            border: 1px solid #000000;
+            color: #ffffff;
+            border: 1px solid #ffffff;
             -webkit-transition: all .3s ease-in-out;
             -moz-transition: all .3s ease-in-out;
             transition: all .3s ease-in-out;
@@ -74,7 +88,7 @@
         .btn-custom:focus,
         .btn-custom:active {
             color: #000000;
-            background-color: #fff;
+            background-color: #ffffff;
             border-color: #000000;
         }
     </style>
@@ -101,6 +115,9 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#flyer">Novidades</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#about">Sobre</a>
                     </li>
                     <li>
@@ -116,6 +133,21 @@
         <!-- /.container -->
     </nav>
 
+    <!-- Flyer Section -->
+    <section id="flyer" class="flyer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="flyer-container">
+                        <a href="https://shotgun.live/pt-pt/venues/radial-av">
+                            <img src="./img/flyer-poster.jpg" alt="Flyer" class="img-responsive" style="border: 10px solid #fff; box-shadow: 0px 0px 20px rgba(0,0,0,0.3);">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Intro Header -->
     <header class="intro">
         <div class="intro-body">
@@ -124,7 +156,7 @@
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <h1 class="brand-heading" style="color: black;">RA.DI.AL</h1>
                         <p class="intro-text">Música e Arte em Sintonia.</p>
-                        <p class="intro-text">Fusão de batidas eletrônicas e visuais.</p>
+                        <!-- <p class="intro-text">Fusão de batidas eletrónicas e visuais.</p> -->
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -186,8 +218,8 @@
 
     <!-- Footer -->
     <footer>
-        <div>
-            <p>Copyright &copy; 2014 maintained and created by <a href="https://www.instagram.com/alldesigns.oficial/">All Designs</a></p>
+        <div class="container text-center">
+            <p>Copyright &copy; 2024 maintained and created by <a href="https://www.instagram.com/alldesigns.oficial/">All Designs</a></p>
         </div>
     </footer>
 
