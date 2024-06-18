@@ -139,14 +139,28 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="flyer-container">
-                        <a href="https://shotgun.live/pt-pt/venues/radial-av">
-                            <img src="./img/flyer-poster.jpg" alt="Flyer" class="img-responsive" style="border: 10px solid #fff; box-shadow: 0px 0px 20px rgba(0,0,0,0.3);">
-                        </a>
+                        <div class="content" onclick="openLinkInNewTab()">
+                            <a onclick="playAudio()">
+                                <img src="./img/flyer-poster.jpg" alt="Flyer" class="img-responsive" style="border: 10px solid #fff; box-shadow: 0px 0px 20px rgba(0,0,0,0.3);">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // Function to open link in new tab
+        function openLinkInNewTab() {
+            // Specify the URL you want to open in a new tab
+            var url = 'https://shotgun.live/pt-pt/venues/radial-av';
+            
+            // Open the URL in a new tab
+            var newTab = window.open(url, '_blank');
+            newTab.focus();
+        }
+    </script>
 
     <!-- Intro Header -->
     <header class="intro">
@@ -222,6 +236,20 @@
             <p>Copyright &copy; 2024 maintained and created by <a href="https://www.instagram.com/alldesigns.oficial/">All Designs</a></p>
         </div>
     </footer>
+
+     <!-- Audio Element -->
+     <audio id="myAudio" src="./audio/first.mp3" preload="auto"></audio>
+    
+     <!-- Play Button -->
+     <button >Play Audio</button>
+
+     <script>
+         function playAudio() {
+             var audio = document.getElementById('myAudio');
+             audio.volume = 0.2; // Set volume to low (20%)
+             audio.play();
+         }
+     </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
