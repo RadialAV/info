@@ -133,6 +133,41 @@
         <!-- /.container -->
     </nav>
 
+    <style>
+        .video-container {
+            position: relative;
+            width: 50%;
+            max-width: 500px;
+        }
+
+        .video-responsive {
+            width: 75%;
+            height: auto;
+            border: 10px solid #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function playVideo() {
+            var video = document.getElementById("flyerVideo");
+            video.play();
+        }
+    </script>
+
     <!-- Flyer Section -->
     <section id="flyer" class="flyer-section">
         <div class="container">
@@ -140,9 +175,13 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="flyer-container">
                         <div class="content" onclick="openLinkInNewTab()">
-                            <a onclick="playAudio()">
-                                <img src="./img/flyer-poster.jpg" alt="Flyer" class="img-responsive" style="border: 10px solid #fff; box-shadow: 0px 0px 20px rgba(0,0,0,0.3);">
-                            </a>
+                        <a onclick="playAudio()">
+                            <video id="flyerVideo" class="video-responsive" autoplay muted>
+                                <source src="./img/flyer-poster.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </a>
+                            <!-- <button class="play-button" onclick="playVideo()">Play</button>-->
                         </div>
                     </div>
                 </div>
