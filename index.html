@@ -22,76 +22,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link rel="icon" href="./img/test.png" type="image/png">
-    <style>
-        .centered-background {
-            width: 100%;
-            max-width: 750px;
-            height: 300px;
-            background-image: url('./img/radial_gif.gif');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            margin: 0 auto;
-        }
-        .flyer-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: #000; /* Black background */
-            padding: 100px 0; /* Adjust padding for positioning */
-        }
-
-        .flyer-container {
-            max-width: 100%;
-            height: auto;
-            max-height: 1125px; /* Adjust max-height as needed */
-        }
-
-        .intro {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 100vh;
-            background: url('./img/intro-bg.jpg') no-repeat center center;
-            background-size: cover;
-        }
-
-        .btn-custom {
-            display: inline-block;
-            padding: 6px 12px;
-            margin-bottom: 0;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 1.42857143;
-            text-align: center;
-            white-space: nowrap;
-            vertical-align: middle;
-            cursor: pointer;
-            user-select: none;
-            background-color: transparent;
-            color: #ffffff;
-            border: 1px solid #ffffff;
-            -webkit-transition: all .3s ease-in-out;
-            -moz-transition: all .3s ease-in-out;
-            transition: all .3s ease-in-out;
-        }
-
-        .btn-custom:hover,
-        .btn-custom:focus,
-        .btn-custom:active {
-            color: #000000;
-            background-color: #ffffff;
-            border-color: #000000;
-        }
-    </style>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -107,103 +42,26 @@
                     <i></i> <span class="light">Radial</span> .AV
                 </a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#flyer">Novidades</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">Sobre</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#download">Eventos</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contactos</a>
-                    </li>
+                    <li class="hidden"><a href="#page-top"></a></li>
+                    <li><a class="page-scroll" href="#flyer">Novidades</a></li>
+                    <li><a class="page-scroll" href="#about">Sobre</a></li>
+                    <li><a class="page-scroll" href="#download">Eventos</a></li>
+                    <li><a class="page-scroll" href="#contact">Contactos</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
-
-    <style>
-        .video-container {
-            position: relative;
-            width: 50%;
-            max-width: 500px;
-        }
-
-        .video-responsive {
-            width: 75%;
-            height: auto;
-            border: 10px solid #fff;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 2rem;
-            color: white;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px 20px;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-    </style>
-    <script>
-        function playVideo() {
-            var video = document.getElementById("flyerVideo");
-            video.play();
-        }
-    </script>
-
-    <!-- Flyer Section -->
+    <!-- Flyer Section with Video -->
     <section id="flyer" class="flyer-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="flyer-container">
-                        <a onclick="openLinkInNewTab()"><img src="./img/shotgun2.png" style="width: 50%; height: 50%;" alt="Logo"></a>
-                        <div class="content" onclick="openLinkInNewTab()">
-                        <a onclick="playAudio()">
-                            <video id="flyerVideo" class="video-responsive" autoplay muted>
-                                <source src="./img/flyer-poster.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </a>
-                        
-                        </div>
-                        <a onclick="openLinkInNewTab()"><img src="./img/shotgun2.png" style="width: 50%; height: 50%;" alt="Logo"></a>
-                    </div>
-                </div>
-                
-            </div>
+        <div class="video-container">
+            <video id="flyerVideo" class="video-responsive" autoplay muted loop>
+                <source src="./img/flyer-poster.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-        
     </section>
-
-    <script>
-        // Function to open link in new tab
-        function openLinkInNewTab() {
-            // Specify the URL you want to open in a new tab
-            var url = 'https://shotgun.live/pt-pt/venues/radial-av';
-            
-            // Open the URL in a new tab
-            var newTab = window.open(url, '_blank');
-            newTab.focus();
-        }
-    </script>
 
     <!-- Intro Header -->
     <header class="intro">
@@ -211,7 +69,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center">
-                        <h1 class="brand-heading" style="color: black;">RA.DI.AL</h1>
+                        <h1 class="brand-heading">RA.DI.AL</h1>
                         <p class="intro-text">Música e Arte em Sintonia.</p>
                         <p class="intro-text">Fusão de batidas eletrónicas e visuais.</p>
                         <a href="#about" class="btn btn-circle page-scroll">
@@ -223,28 +81,44 @@
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
+
+    <!-- About Section (Sobre o Radial) -->
+    <section id="about" class="container content-section text-center about-section">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <div class="centered-background"></div>
-                <br>
                 <h2>Sobre o Radial</h2>
-                <p>O conceito radial surge da vontade de aliar a música e a arte visual enquanto veículos de expressão tendo como núcleo o despertar da individualidade que atua em prol de um centro: <a href="https://www.instagram.com/radial.av/">a comunidade</a> e a sua força criativa.</p>
-                <p>O termo Radial simboliza o ponto central de cada individuo em que o núcleo (a sua identidade e criatividade) irradia para o mundo em redor.</p>
+                <p>
+                    O conceito Radial surge da vontade de aliar a música e a arte visual enquanto veículos de expressão,
+                    tendo como núcleo o despertar da individualidade que atua em prol de um centro:
+                    <a href="https://www.instagram.com/radial.av/">a comunidade</a> e a sua força criativa.
+                </p>
+                <p>
+                    O termo Radial simboliza o ponto central de cada indivíduo em que o núcleo (a sua identidade e criatividade)
+                    irradia para o mundo em redor.
+                </p>
+                <p>
+                    A Radial não é apenas uma editora de música e uma plataforma de eventos. É um movimento artístico que
+                    conecta músicos, artistas visuais e criadores de conteúdo digital, promovendo a colaboração e a inovação
+                    criativa. O nosso objetivo é proporcionar experiências únicas através da fusão de som e imagem, criando um
+                    espaço onde a arte e a música coexistem em harmonia.
+                </p>
+                <p>
+                    Junta-te à nossa missão e participa da revolução criativa. Vamos irradiar a nossa energia criativa e
+                    construir uma comunidade mais forte e diversificada.
+                </p>
             </div>
         </div>
     </section>
 
+
+
     <!-- Download Section -->
     <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Eventos | Radial</h2>
-                    <p>Segue-nos para ficares a par dos nossos próximos eventos.</p>
-                    <a href="https://shotgun.live/pt-pt/venues/radial-av" class="btn btn-custom">Proximos eventos</a>
-                </div>
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Eventos | Radial</h2>
+                <p>Segue-nos para ficares a par dos nossos próximos eventos.</p>
+                <a href="https://shotgun.live" class="btn btn-custom">Próximos Eventos</a>
             </div>
         </div>
     </section>
@@ -254,20 +128,10 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contacta-nos</h2>
-                <p>Queres fazer parte da <a href="https://www.instagram.com/radial.av/">comunidade</a> Radial?</p>
-                <p>Dos artistas aos Staff members todos podemos contribuir para esta comunidade crescer cada vez mais!</p>
-                <p>Contacta-nos nas redes socias!</p>
-                <p>Ou envia-nos o teu curriculo para: <a href="mailto:Radial.audiov@gmail.com">Radial.audiov@gmail.com</a></p>
+                <p>Queres fazer parte da comunidade Radial?</p>
                 <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://www.instagram.com/radial.av" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/@RadialAV" class="btn btn-default btn-lg"><i class="fa fa-youtube fa-fw"></i> <span class="network-name">Youtube</span></a>
-                    </li>
-                    <li>
-                        <!-- <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a> -->
-                    </li>
+                    <li><a href="https://www.instagram.com/radial.av" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a></li>
+                    <li><a href="https://www.youtube.com/@RadialAV" class="btn btn-default btn-lg"><i class="fa fa-youtube fa-fw"></i> <span class="network-name">YouTube</span></a></li>
                 </ul>
             </div>
         </div>
@@ -276,23 +140,9 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; 2024 maintained and created by <a href="https://www.instagram.com/alldesigns.oficial/">All Designs</a></p>
+            <p>&copy; 2024 Radial - Criado por All Designs</p>
         </div>
     </footer>
-
-     <!-- Audio Element -->
-     <audio id="myAudio" src="./audio/first.mp3" preload="auto"></audio>
-    
-     <!-- Play Button -->
-     <button >Play Audio</button>
-
-     <script>
-         function playAudio() {
-             var audio = document.getElementById('myAudio');
-             audio.volume = 0.2; // Set volume to low (20%)
-             audio.play();
-         }
-     </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
