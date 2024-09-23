@@ -18,24 +18,50 @@ html {
     width: 100%;
 }
 
-/* About Section com "intro-bg.jpg" como fundo e aumento do texto */
 .about-section {
     background: url('../img/intro-bg.jpg') no-repeat center center;
     background-size: cover;
-    color: white;
-    padding: 100px 0;
-    height: 100vh;
-    text-align: center;
+    padding: 100px 50px;
+    color: #fff;
+    text-align: left;
 }
 
     .about-section h2 {
-        font-size: 3rem; /* Aumentar o tamanho do título */
+        text-align: center; /* Mantém o título "Sobre o Radial" centralizado */
+        font-size: 3rem;
+        margin-bottom: 20px;
     }
 
     .about-section p {
-        font-size: 1.8rem; /* Aumentar o tamanho dos parágrafos */
-        margin-bottom: 20px; /* Adicionar mais espaçamento entre parágrafos */
+        font-size: 1.8rem;
+        max-width: 800px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-align: justify; /* Justifica o texto */
     }
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .about-section h2 {
+        font-size: 2.5rem; /* Ajusta o tamanho do título em telas médias */
+    }
+
+    .about-section p {
+        font-size: 1.6rem; /* Ajusta o tamanho do texto */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section h2 {
+        font-size: 2rem; /* Ajusta o tamanho do título em dispositivos móveis */
+    }
+
+    .about-section p {
+        font-size: 1.4rem; /* Ajusta o tamanho do texto */
+        padding: 0 20px; /* Ajusta o padding lateral */
+    }
+}
+
 
 /* Video Fullscreen com Efeitos Visuais */
 .intro {
