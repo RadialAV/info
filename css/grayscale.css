@@ -1,373 +1,286 @@
 /*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ * Grayscale Theme Redesign - Criação de uma experiência visual impactante.
  */
 
 body {
-    width: 100%;
-    height: 100%;
-    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
     background-color: #000;
+    color: #fff;
+    height: 100vh;
 }
 
 html {
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+}
+
+/* About Section com "intro-bg.jpg" como fundo e aumento do texto */
+.about-section {
+    background: url('../img/intro-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    height: 100vh;
+    text-align: center;
+}
+
+    .about-section h2 {
+        font-size: 3rem; /* Aumentar o tamanho do título */
+    }
+
+    .about-section p {
+        font-size: 1.8rem; /* Aumentar o tamanho dos parágrafos */
+        margin-bottom: 20px; /* Adicionar mais espaçamento entre parágrafos */
+    }
+
+/* Video Fullscreen com Efeitos Visuais */
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-size: cover;
+    padding: 50px 10px; /* Ajusta o espaçamento */
+}
+
+    .intro video {
+        width: 100%;
+        height: auto;
+        max-height: 90vh;
+        object-fit: cover;
+        filter: brightness(0.4) saturate(1.3);
+        z-index: 0;
+    }
+
+/* Flyer Section Ajustada */
+.flyer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000;
+    padding: 50px 0;
+    height: 100vh;
+    position: relative;
+}
+
+.flyer-container {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0 0 35px;
+    .flyer-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-height: 100vh;
+        border: none;
+        z-index: 1;
+    }
+
+/* Texto Animado RA.DI.AL (aumentado) */
+.intro .brand-heading {
+    font-size: 10rem; /* Aumenta o tamanho do texto */
+    letter-spacing: 10px; /* Aumenta o espaçamento entre letras */
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
+    background: linear-gradient(135deg, #00ffcc, #0072ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: neonGlow 2s infinite alternate;
 }
 
-p {
-    margin: 0 0 25px;
-    font-size: 18px;
-    line-height: 1.5;
-}
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 15px rgba(0,255,200,0.5), 0 0 30px rgba(0,255,200,0.2);
+    }
 
-@media(min-width:768px) {
-    p {
-        margin: 0 0 35px;
-        font-size: 20px;
-        line-height: 1.6;
+    100% {
+        text-shadow: 0 0 30px rgba(0,114,255,1), 0 0 60px rgba(0,255,200,1);
     }
 }
 
-a {
-    color: #42dca3;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
-
-a:hover,
-a:focus {
-    text-decoration: none;
-    color: #1d9b6c;
-}
-
-.light {
-    font-weight: 400;
-}
-
-.navbar-custom {
-    margin-bottom: 0;
-    border-bottom: 1px solid rgba(255,255,255,.3);
+/* Botão Animado com Sombra e Pulsação */
+.btn-circle {
+    margin-top: 20px;
+    padding: 20px 50px;
+    border: 3px solid #00ffcc;
+    border-radius: 50px;
+    background: transparent;
+    color: #00ffcc;
+    font-size: 1.5rem;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #000;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s, transform 0.5s;
+    animation: pulseBtn 1.5s infinite alternate;
 }
 
-.navbar-custom .navbar-brand {
-    font-weight: 700;
-}
-
-.navbar-custom .navbar-brand:focus {
-    outline: 0;
-}
-
-.navbar-custom .navbar-brand .navbar-toggle {
-    padding: 4px 6px;
-    font-size: 16px;
+/* Texto Secundário (Música e Arte em Sintonia) */
+.intro .intro-text {
+    font-size: 2rem; /* Aumenta o tamanho do texto secundário */
+    margin-top: 20px;
     color: #fff;
+    opacity: 0;
+    animation: fadeInText 3s forwards 2s; /* Aparece suavemente */
 }
 
-.navbar-custom .navbar-brand .navbar-toggle:focus,
-.navbar-custom .navbar-brand .navbar-toggle:active {
-    outline: 0;
-}
-
-.navbar-custom a {
-    color: #fff;
-}
-
-.navbar-custom .nav li a {
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
-}
-
-.navbar-custom .nav li a:hover {
-    outline: 0;
-    color: rgba(255,255,255,.8);
-    background-color: transparent;
-}
-
-.navbar-custom .nav li a:focus,
-.navbar-custom .nav li a:active {
-    outline: 0;
-    background-color: transparent;
-}
-
-.navbar-custom .nav li.active {
-    outline: 0;
-}
-
-.navbar-custom .nav li.active a {
-    background-color: rgba(255,255,255,.3);
-}
-
-.navbar-custom .nav li.active a:hover {
-    color: #fff;
-}
-
-@media(min-width:768px) {
-    .navbar-custom {
-        padding: 20px 0;
-        border-bottom: 0;
-        letter-spacing: 1px;
-        background: 0 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
     }
 
-    .navbar-custom.top-nav-collapse {
-        padding: 0;
-        border-bottom: 1px solid rgba(255,255,255,.3);
-        background: #000;
+    100% {
+        opacity: 1;
     }
 }
 
-.intro {
-    display: table;
+/* Animação de Pulso */
+@keyframes pulseBtn {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 255, 200, 0.6), 0 0 20px rgba(0, 255, 200, 0.4);
+    }
+
+    100% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 255, 200, 0.8), 0 0 40px rgba(0, 255, 200, 0.6);
+    }
+}
+
+.btn-circle:hover {
+    background-color: #00ffcc;
+    color: #000;
+    transform: scale(1.2); /* Aumentar ainda mais no hover */
+    box-shadow: 0 0 30px rgba(0, 255, 200, 0.8), 0 0 60px rgba(0, 255, 200, 1);
+}
+
+/* Ajustar os espaços entre as secções */
+.content-section {
+    padding: 50px 0; /* Reduzir o padding entre secções */
+}
+
+/* Ajuste para tornar o vídeo responsivo */
+.flyer-section .video-responsive {
     width: 100%;
     height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    max-height: 80vh; /* Limitar a altura máxima do vídeo */
+    object-fit: cover; /* Garante que o vídeo cubra a área */
 }
 
-.intro .intro-body {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.intro .intro-body .brand-heading {
-    font-size: 40px;
-}
-
-.intro .intro-body .intro-text {
-    font-size: 18px;
-}
-
-@media(min-width:768px) {
-    .intro {
-        height: 100%;
-        padding: 0;
-    }
-
-    .intro .intro-body .brand-heading {
-        font-size: 100px;
-    }
-
-    .intro .intro-body .intro-text {
-        font-size: 26px;
-    }
-}
-
-.btn-circle {
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
-    padding: 7px 16px;
-    border: 2px solid #fff;
-    border-radius: 100%!important;
-    font-size: 40px;
-    color: #fff;
-    background: 0 0;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
-}
-
-.btn-circle:hover,
-.btn-circle:focus {
-    outline: 0;
-    color: #fff;
-    background: rgba(255,255,255,.1);
-}
-
-.btn-circle i.animated {
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s;
-}
-
-.btn-circle:hover i.animated {
-    -webkit-animation-name: pulse;
-    -moz-animation-name: pulse;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-}
-
-@-webkit-keyframes pulse {    
-    0 {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-
-    50% {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-@-moz-keyframes pulse {    
-    0 {
-        -moz-transform: scale(1);
-        transform: scale(1);
-    }
-
-    50% {
-        -moz-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    100% {
-        -moz-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-.content-section {
-    padding-top: 100px;
-}
-
-.download-section {
-    width: 100%;
-    padding: 50px 0;
-    color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-#map {
-    width: 100%;
-    height: 200px;
-    margin-top: 100px;
-}
-
-@media(min-width:767px) {
-    .content-section {
-        padding-top: 250px;
-    }
-
-    .download-section {
-        padding: 100px 0;
-    }
-
-    #map {
-        height: 400px;
-        margin-top: 250px;
-    }
-}
-
-.btn {
-    border-radius: 0;
+/* Ajustes de responsividade para o cabeçalho e botões */
+.intro .brand-heading {
+    font-size: 5rem; /* Ajustar o tamanho do texto no desktop */
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
 }
 
-.btn-default {
-    border: 1px solid #42dca3;
-    color: #42dca3;
-    background-color: transparent;
+.intro .intro-text {
+    font-size: 1.5rem; /* Ajustar o tamanho do texto de introdução */
 }
 
-.btn-default:hover,
-.btn-default:focus {
-    border: 1px solid #42dca3;
-    outline: 0;
-    color: #000;
-    background-color: #42dca3;
+/* Ajustar botões no mobile */
+.btn-circle {
+    padding: 10px 20px; /* Tamanho de botão ajustado */
+    font-size: 1.2rem;
 }
 
-ul.banner-social-buttons {
-    margin-top: 0;
-}
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+    .flyer-section .video-responsive {
+        width: 100%; /* O vídeo ocupará a tela toda */
+        height: auto;
+    }
 
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        margin-top: 15px;
+    .intro .brand-heading {
+        font-size: 2rem; /* Reduzir tamanho do texto em telas menores */
+    }
+
+    .intro .intro-text {
+        font-size: 1rem; /* Reduzir o tamanho do texto */
+    }
+
+    .btn-circle {
+        padding: 8px 16px; /* Ajustar o tamanho do botão */
+        font-size: 1rem; /* Ajustar o tamanho do texto no botão */
     }
 }
 
-@media(max-width:767px) {
-    ul.banner-social-buttons li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
+/* Estilos gerais para o texto no Intro Header */
+.intro .brand-heading {
+    font-size: 5rem; /* Tamanho do título em telas maiores */
+    line-height: 1.2;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-size: clamp(2rem, 8vw, 10rem); /* Automatically adjusts based on screen size */
+}
+
+.intro .intro-text {
+    font-size: 1.8rem; /* Tamanho do texto em telas maiores */
+    margin-bottom: 40px; /* Espaçamento abaixo do texto */
+    line-height: 1.4;
+    font-size: clamp(1rem, 4vw, 2rem);
+}
+
+/* Ajustes de tamanho para telas menores */
+@media (max-width: 1200px) {
+    .intro .brand-heading {
+        font-size: 4rem; /* Ajusta o tamanho do título em telas menores */
     }
 
-    ul.banner-social-buttons li:last-child {
-        margin-bottom: 0;
+    .intro .intro-text {
+        font-size: 1.6rem; /* Ajusta o tamanho do texto */
     }
 }
 
-footer {
-    padding: 50px 0;
+@media (max-width: 992px) {
+    .intro .brand-heading {
+        font-size: 3.5rem; /* Tamanho do título em tablets */
+    }
+
+    .intro .intro-text {
+        font-size: 1.4rem; /* Ajusta o tamanho do texto */
+    }
 }
 
-footer p {
-    margin: 0;
+@media (max-width: 768px) {
+    .intro .brand-heading {
+        font-size: 3rem; /* Ajusta o título em dispositivos móveis */
+    }
+
+    .intro .intro-text {
+        font-size: 1.2rem; /* Ajusta o texto em dispositivos móveis */
+    }
+
+    .intro {
+        padding: 20px; /* Adiciona padding ao redor da secção para evitar texto colado na borda */
+    }
 }
 
-::-moz-selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
-}
+@media (max-width: 576px) {
+    .intro .brand-heading {
+        font-size: 2.5rem; /* Título em smartphones menores */
+    }
 
-::selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
+    .intro .intro-text {
+        font-size: 1rem; /* Texto em smartphones menores */
+    }
 }
+@media (min-width: 1600px) {
+    .intro .brand-heading {
+        font-size: 12rem;
+    }
 
-img::selection {
-    background: 0 0;
-}
-
-img::-moz-selection {
-    background: 0 0;
-}
-
-body {
-    webkit-tap-highlight-color: rgba(255,255,255,.2);
+    .intro .intro-text {
+        font-size: 3rem;
+    }
 }
