@@ -349,7 +349,7 @@ html {
     flex-direction: column; /* Coloca os vídeos um em cima do outro */
     align-items: center;
     width: 100%; /* Garante que o container ocupe toda a largura */
-    max-width: 800px; /* Define uma largura máxima para os vídeos */
+    max-width: 1000px; /* Define uma largura máxima para os vídeos */
 }
 
 /* Vídeos responsivos */
