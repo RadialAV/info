@@ -339,7 +339,7 @@ html {
     justify-content: center;
     text-align: center;
     background-color: #000;
-    padding: 40px 0; /* Aumenta o padding para mais espaço ao redor */
+    padding: 100px 0; /* Aumenta o padding para mais espaço ao redor */
     position: relative;
 }
 
