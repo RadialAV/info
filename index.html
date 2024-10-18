@@ -21,15 +21,28 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <link rel="icon" href="./img/test.png" type="image/png">
+    <style>
+        /* Espaçamento entre vídeos */
+        #instagram-videos iframe {
+            margin-right: 20px; /* Aumenta o espaço entre os vídeos do Instagram */
+        }
+
+        /* Tamanho dos ícones das redes sociais */
+        .social-icons i {
+            font-size: 36px; /* Aumenta o tamanho dos ícones das redes sociais */
+            margin: 0 10px; /* Espaço entre os ícones */
+        }
+    </style>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!-- Background Video -->
+<video autoplay muted loop id="backgroundVideo">
+    <source src="./img/promo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -47,21 +60,30 @@
                     <li class="hidden"><a href="#page-top"></a></li>
                     <li><a class="page-scroll" href="#flyer">Novidades</a></li>
                     <li><a class="page-scroll" href="#about">Sobre</a></li>
+                    <li><a class="page-scroll" href="#youtube-videos">Arquivo Radial</a></li>
                     <li><a class="page-scroll" href="#download">Eventos</a></li>
+                    <li><a class="page-scroll" href="#editorial">Editora</a></li>
                     <li><a class="page-scroll" href="#contact">Contactos</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <!-- Flyer Section with Video -->
-    <section id="flyer" class="flyer-section">
-        <div class="video-container">
-            <video id="flyerVideo" class="video-responsive" autoplay muted loop>
-                <source src="./img/flyer-poster.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
+<section id="flyer" class="flyer-section">
+    <div class="video-container">
+        <video id="flyerVideo" class="video-responsive" autoplay muted loop>
+            <source src="./img/flyer-poster.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+       <video id="flyerVideo" class="video-responsive" autoplay muted loop>
+            <source src="./img/isxradial.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+   </section>
+
+
 
     <!-- Intro Header -->
     <header class="intro">
@@ -80,7 +102,6 @@
             </div>
         </div>
     </header>
-
 
     <!-- About Section (Sobre o Radial) -->
     <section id="about" class="container content-section text-center about-section">
@@ -105,43 +126,112 @@
                 <p>
                     É uma celebração de um ponto que todas as pessoas têm em comum, a criatividade,
                     e uma oportunidade de irradiar esta energia criando um ambiente único e momentos que não sairão da memória nos próximos tempos.
-
                 </p>
             </div>
         </div>
     </section>
 
+   <!-- Vídeos do YouTube Section -->
+<section id="youtube-videos" class="container content-section text-center">
+    <h2>Arquivo Radial</h2>
+    <div style="overflow-x: auto; white-space: nowrap; margin: 40px 0;">
+        <div class="youtube-embed">
+            <iframe width="300" height="400" src="https://www.youtube.com/embed/WPcViyHKczI" frameborder="0" allowfullscreen style="margin-right: 30px;"></iframe>
+        </div>
+        <div class="youtube-embed">
+            <iframe width="300" height="400" src="https://www.youtube.com/embed/kENZ0wIvtmo" frameborder="0" allowfullscreen style="margin-right: 30px;"></iframe>
+        </div>
+        <div class="youtube-embed">
+            <iframe width="300" height="400" src="https://www.youtube.com/embed/jLDpFXhFNzY" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
 
 
-    <!-- Download Section -->
+
+   
+
+    <!-- Download Section (Eventos) -->
     <section id="download" class="content-section text-center">
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Eventos | Radial</h2>
                 <p>Segue-nos para ficares a par dos nossos próximos eventos.</p>
-                <a href="https://shotgun.live" class="btn btn-custom">Próximos Eventos</a>
+                <a href="https://shotgun.live/pt-pt/venues/radial-av" class="btn btn-custom">Próximos Eventos</a>
+                <div class="event-card" style="margin: 20px auto; max-width: 400px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                    <video style="width: 100%; height: auto;" autoplay muted loop>
+                        <source src="https://res.cloudinary.com/shotgun/video/upload/c_fit,ar_16:9,w_854/ac_none/br_2500000/du_30/f_auto:video/q_auto/production/artworks/Is_X_Rav_Full_if09n0.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="event-info" style="padding: 15px; text-align: center;">
+                        <h3>Evento Especial: Halloween Ilektronik Sangeet x Radial.AV</h3>
+                        <p>Data: 31 de Outubro</p>
+                        <p>Local: Armazém 9, Lisboa</p>
+                        <a href="https://shotgun.live/events/ilektronik-sangeet-x-radial-av-halloween-edition?utm_source=au" class="btn btn-custom">Comprar Bilhetes</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
+    <!-- Editora Section -->
+    <section id="editorial" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contacta-nos</h2>
-                <p>Queres fazer parte da comunidade Radial?</p>
-                <ul class="list-inline banner-social-buttons">
-                    <li><a href="https://www.instagram.com/radial.av" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a></li>
-                    <li><a href="https://www.youtube.com/@RadialAV" class="btn btn-default btn-lg"><i class="fa fa-youtube fa-fw"></i> <span class="network-name">YouTube</span></a></li>
-                </ul>
+                <h2>Radial Label</h2>
+                <p>Apresentamos a nossa editora Radial (RAV), um espaço dedicado à inovação e autenticidade na música eletrónica.</p>
+                <p>Esta é a nossa missão: criar, desafiar e transformar o som.</p>
+                <p>Na Radial, acreditamos que a música eletrónica é um espaço infinito de inovação, onde cada batida é uma oportunidade de criação. Estamos aqui para conectar mentes criativas e dar voz àqueles que não têm medo de desafiar o óbvio.</p>
+                <p>Sabemos que o verdadeiro poder da música eletrónica está na autenticidade e na capacidade de explorar o desconhecido. É isso que procuramos, é isso que celebramos.</p>
+                <p>Se és daqueles que desafiam o convencional, que procuram sempre criar algo único, então este espaço também é teu. Juntos, queremos ir além.</p>
             </div>
         </div>
     </section>
+
+    <!-- Instagram Videos Section -->
+<section id="instagram-videos" class="container content-section text-center">
+    <h2></h2>
+    <div style="overflow-x: auto; white-space: nowrap; margin: 40px 0;">
+        <div class="instagram-embed">
+            <iframe src="https://www.instagram.com/p/DAyzzJqIp9Z/embed" width="300" height="400" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div class="instagram-embed">
+            <iframe src="https://www.instagram.com/p/DA1PXpaoIoy/embed" width="300" height="400" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div class="instagram-embed">
+            <iframe src="https://www.instagram.com/p/DA6htHDIj9g/embed" width="300" height="400" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Contact Section -->
+<section id="contact" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Contactos</h2>
+            <p>Para mais informações, não hesite em entrar em contacto connosco.</p>
+            <p>Email: <a href="mailto:radial.audiov@gmail.com">radial.audiov@gmail.com</a></p>
+            <p>Telefone: +351 933 725 110</p>
+            <p>Siga-nos nas redes sociais:</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/radial.av/" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@RadialAV" target="_blank">
+                    <i class="fa fa-youtube"></i>
+                </a>
+            </div>
+            <p>Queres fazer parte da comunidade Radial?</p>
+        </div>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>&copy; 2024 Radial - Criado por All Designs</p>
+            <p>&copy; 2024 Radial. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -154,7 +244,7 @@
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
+    <!-- Custom JavaScript -->
     <script src="js/grayscale.js"></script>
 
 </body>
