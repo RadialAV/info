@@ -339,7 +339,7 @@ html {
     justify-content: center;
     text-align: center;
     background-color: #000;
-    padding: 10px; /* Aumenta o padding para mais espaço ao redor */
+    padding: 40px; /* Aumenta o padding para mais espaço ao redor */
     position: relative;
 }
 
@@ -349,7 +349,7 @@ html {
     flex-direction: column; /* Coloca os vídeos um em cima do outro */
     align-items: center;
     width: 100%; /* Garante que o container ocupe toda a largura */
-    max-width: 750px; /* Define uma largura máxima para os vídeos */
+    max-width: 650px; /* Define uma largura máxima para os vídeos */
 }
 
 /* Vídeos responsivos */
