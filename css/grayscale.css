@@ -2,6 +2,13 @@
  * Grayscale Theme Redesign - Criação de uma experiência visual impactante.
  */
 
+:root {
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 40px;
+    --spacing-xlarge: 50px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -19,26 +26,26 @@ html {
 }
 
 .about-section {
-    background: url('../img/intro-bg.jpg') no-repeat center center;
+    background: url('../img/jpg') no-repeat center center;
     background-size: cover;
-    padding: 100px 50px;
+    padding: var(--spacing-xlarge) var(--spacing-medium);
     color: #fff;
     text-align: left;
 }
 
-    .about-section h2 {
-        text-align: center; /* Mantém o título "Sobre o Radial" centralizado */
-        font-size: 3rem;
-        margin-bottom: 20px;
-    }
+.about-section h2 {
+    text-align: center; /* Mantém o título "Sobre o Radial" centralizado */
+    font-size: 3rem;
+    margin-bottom: var(--spacing-medium);
+}
 
-    .about-section p {
-        font-size: 1.8rem;
-        max-width: 800px;
-        line-height: 1.5;
-        margin-bottom: 20px;
-        text-align: justify; /* Justifica o texto */
-    }
+.about-section p {
+    font-size: 1.8rem;
+    max-width: 800px;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-medium);
+    text-align: justify; /* Justifica o texto */
+}
 
 /* Responsividade */
 @media (max-width: 992px) {
@@ -62,7 +69,6 @@ html {
     }
 }
 
-
 /* Video Fullscreen com Efeitos Visuais */
 .intro {
     position: relative;
@@ -76,14 +82,14 @@ html {
     padding: 50px 10px; /* Ajusta o espaçamento */
 }
 
-    .intro video {
-        width: 100%;
-        height: auto;
-        max-height: 90vh;
-        object-fit: cover;
-        filter: brightness(0.4) saturate(1.3);
-        z-index: 0;
-    }
+.intro video {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: cover;
+    filter: brightness(0.4) saturate(1.3);
+    z-index: 0;
+}
 
 /* Flyer Section Ajustada */
 .flyer-section {
@@ -92,7 +98,7 @@ html {
     align-items: center;
     text-align: center;
     background-color: #000;
-    padding: 50px 0;
+    padding: var(--spacing-xlarge) 0;
     height: 100vh;
     position: relative;
 }
@@ -106,24 +112,29 @@ html {
     overflow: hidden;
 }
 
-    .flyer-container video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        max-height: 100vh;
-        border: none;
-        z-index: 1;
-    }
+.flyer-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 100vh;
+    border: none;
+    z-index: 1;
+}
 
 /* Texto Animado RA.DI.AL (aumentado) */
 .intro .brand-heading {
-    font-size: 10rem; /* Aumenta o tamanho do texto */
+    font-size: clamp(3rem, 8vw, 12rem); /* Ajusta tamanho do texto */
     letter-spacing: 10px; /* Aumenta o espaçamento entre letras */
     text-transform: uppercase;
     background: linear-gradient(135deg, #00ffcc, #0072ff);
     -webkit-background-clip: text;
     color: transparent;
     animation: neonGlow 2s infinite alternate;
+    transition: transform 0.3s ease-in-out; /* Transição suave */
+}
+
+.intro:hover .brand-heading {
+    transform: scale(1.05); /* Aumenta ligeiramente no hover */
 }
 
 @keyframes neonGlow {
@@ -138,7 +149,7 @@ html {
 
 /* Botão Animado com Sombra e Pulsação */
 .btn-circle {
-    margin-top: 20px;
+    margin-top: var(--spacing-medium);
     padding: 20px 50px;
     border: 3px solid #00ffcc;
     border-radius: 50px;
@@ -153,11 +164,12 @@ html {
 
 /* Texto Secundário (Música e Arte em Sintonia) */
 .intro .intro-text {
-    font-size: 2rem; /* Aumenta o tamanho do texto secundário */
-    margin-top: 20px;
+    font-size: clamp(1rem, 4vw, 3rem); /* Tamanho do texto em telas maiores */
+    margin-top: var(--spacing-medium);
     color: #fff;
     opacity: 0;
     animation: fadeInText 3s forwards 2s; /* Aparece suavemente */
+    transition: opacity 0.5s ease-in-out; /* Transição suave */
 }
 
 @keyframes fadeInText {
@@ -190,9 +202,9 @@ html {
     box-shadow: 0 0 30px rgba(0, 255, 200, 0.8), 0 0 60px rgba(0, 255, 200, 1);
 }
 
-/* Ajustar os espaços entre as secções */
+/* Ajustar os espaços entre as seções */
 .content-section {
-    padding: 50px 0; /* Reduzir o padding entre secções */
+    padding: var(--spacing-large) 0; /* Reduzir o padding entre seções */
 }
 
 /* Ajuste para tornar o vídeo responsivo */
@@ -205,56 +217,16 @@ html {
 
 /* Ajustes de responsividade para o cabeçalho e botões */
 .intro .brand-heading {
-    font-size: 5rem; /* Ajustar o tamanho do texto no desktop */
-    text-transform: uppercase;
-}
-
-.intro .intro-text {
-    font-size: 1.5rem; /* Ajustar o tamanho do texto de introdução */
-}
-
-/* Ajustar botões no mobile */
-.btn-circle {
-    padding: 10px 20px; /* Tamanho de botão ajustado */
-    font-size: 1.2rem;
-}
-
-/* Estilos responsivos para telas menores */
-@media (max-width: 768px) {
-    .flyer-section .video-responsive {
-        width: 100%; /* O vídeo ocupará a tela toda */
-        height: auto;
-    }
-
-    .intro .brand-heading {
-        font-size: 2rem; /* Reduzir tamanho do texto em telas menores */
-    }
-
-    .intro .intro-text {
-        font-size: 1rem; /* Reduzir o tamanho do texto */
-    }
-
-    .btn-circle {
-        padding: 8px 16px; /* Ajustar o tamanho do botão */
-        font-size: 1rem; /* Ajustar o tamanho do texto no botão */
-    }
-}
-
-/* Estilos gerais para o texto no Intro Header */
-.intro .brand-heading {
-    font-size: 5rem; /* Tamanho do título em telas maiores */
+    font-size: clamp(3rem, 8vw, 12rem); /* Tamanho do título em telas maiores */
     line-height: 1.2;
     letter-spacing: 8px;
-    text-transform: uppercase;
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
-    font-size: clamp(2rem, 8vw, 10rem); /* Automatically adjusts based on screen size */
+    margin-bottom: var(--spacing-medium); /* Espaçamento abaixo do título */
 }
 
 .intro .intro-text {
-    font-size: 1.8rem; /* Tamanho do texto em telas maiores */
-    margin-bottom: 40px; /* Espaçamento abaixo do texto */
+    font-size: clamp(1rem, 4vw, 3rem); /* Tamanho do texto em telas maiores */
+    margin-bottom: var(--spacing-large); /* Espaçamento abaixo do texto */
     line-height: 1.4;
-    font-size: clamp(1rem, 4vw, 2rem);
 }
 
 /* Ajustes de tamanho para telas menores */
@@ -288,7 +260,7 @@ html {
     }
 
     .intro {
-        padding: 20px; /* Adiciona padding ao redor da secção para evitar texto colado na borda */
+        padding: 20px; /* Adiciona padding ao redor da seção para evitar texto colado na borda */
     }
 }
 
@@ -301,12 +273,91 @@ html {
         font-size: 1rem; /* Texto em smartphones menores */
     }
 }
+
 @media (min-width: 1600px) {
     .intro .brand-heading {
-        font-size: 12rem;
-    }
-
-    .intro .intro-text {
-        font-size: 3rem;
+        font-size: 12rem; /* Tamanho extra para telas grandes */
     }
 }
+
+/* Borda para os vídeos do Instagram */
+.instagram-embed {
+    border: 2px solid white; /* Borda branca fina */
+    border-radius: 5px; /* Arredondar os cantos se desejar */
+    display: inline-block; /* Permite que o tamanho se ajuste ao iframe */
+    margin: 0 10px; /* Espaçamento lateral entre os vídeos */
+}
+
+/* Borda para os vídeos do YouTube */
+.youtube-embed {
+    border: 2px solid white; /* Borda branca fina */
+    border-radius: 5px; /* Arredondar os cantos se desejar */
+    display: inline-block; /* Permite que o tamanho se ajuste ao iframe */
+    margin: 0 10px; /* Espaçamento lateral entre os vídeos */
+}
+
+/* Ocultar o cabeçalho do Instagram */
+.instagram-embed iframe {
+    border: none; /* Remover borda padrão do iframe */
+    display: block; /* Garante que o iframe seja exibido como um bloco */
+}
+
+/* Ajuste de tamanho */
+.instagram-embed iframe {
+    width: 100%; /* O iframe irá ocupar toda a largura do div */
+    height: 400px; /* Altura fixa */
+}
+
+.youtube-embed iframe {
+    width: 100%; /* O iframe irá ocupar toda a largura do div */
+    height: 400px; /* Altura fixa */
+}
+
+#backgroundVideo {
+    position: fixed; /* Fixa o vídeo no fundo */
+    top: 50%; /* Alinha verticalmente */
+    left: 50%; /* Alinha horizontalmente */
+    min-width: 100%; /* Preenche toda a largura */
+    min-height: 100%; /* Preenche toda a altura */
+    width: auto; /* Largura automática */
+    height: auto; /* Altura automática */
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+    transform: translate(-50%, -50%); /* Centraliza o vídeo */
+}
+
+.about-section p, 
+.editorial-section p {
+    font-size: 1.125em; /* Defina o tamanho desejado, ajustando conforme necessário */
+    line-height: 1.6; /* Defina a altura da linha para melhorar a legibilidade */
+}
+
+/* Flyer Section Ajustada */
+.flyer-section {
+    display: flex;
+    flex-direction: column; /* Coloca os vídeos um em cima do outro */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #000;
+    padding: 40px 0; /* Aumenta o padding para mais espaço ao redor */
+    position: relative;
+}
+
+/* Container para os vídeos na flyer-section */
+.video-container {
+    display: flex;
+    flex-direction: column; /* Coloca os vídeos um em cima do outro */
+    align-items: center;
+    width: 100%; /* Garante que o container ocupe toda a largura */
+    max-width: 700px; /* Define uma largura máxima para os vídeos */
+}
+
+/* Vídeos responsivos */
+.video-responsive {
+    width: 100%; /* O vídeo ocupará toda a largura do container */
+    height: auto; /* A altura será proporcional à largura */
+    margin-bottom: 20px; /* Espaçamento entre os vídeos */
+    border: 2px solid white; /* Adiciona uma borda branca fina */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar os vídeos */
+}
+
