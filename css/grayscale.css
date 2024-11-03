@@ -28,24 +28,24 @@ html {
 .about-section {
     background: url('../img/jpg') no-repeat center center;
     background-size: cover;
-    padding: var(--spacing-xlarge) var(--spacing-medium);
+    padding: var(--spacing-medium) var(--spacing-small);
     color: #fff;
     text-align: left;
 }
 
-.about-section h2 {
-    text-align: center; /* Mantém o título "Sobre o Radial" centralizado */
-    font-size: 3rem;
-    margin-bottom: var(--spacing-medium);
-}
+    .about-section h2 {
+        text-align: center; /* Mantém o título "Sobre o Radial" centralizado */
+        font-size: 3rem;
+        margin-bottom: var(--spacing-medium);
+    }
 
-.about-section p {
-    font-size: 1.8rem;
-    max-width: 800px;
-    line-height: 1.5;
-    margin-bottom: var(--spacing-medium);
-    text-align: justify; /* Justifica o texto */
-}
+    .about-section p {
+        font-size: 1.8rem;
+        max-width: 800px;
+        line-height: 1.5;
+        margin-bottom: var(--spacing-medium);
+        text-align: justify; /* Justifica o texto */
+    }
 
 /* Responsividade */
 @media (max-width: 992px) {
@@ -82,14 +82,14 @@ html {
     padding: 50px 10px; /* Ajusta o espaçamento */
 }
 
-.intro video {
-    width: 100%;
-    height: auto;
-    max-height: 90vh;
-    object-fit: cover;
-    filter: brightness(0.4) saturate(1.3);
-    z-index: 0;
-}
+    .intro video {
+        width: 100%;
+        height: auto;
+        max-height: 90vh;
+        object-fit: cover;
+        filter: brightness(0.4) saturate(1.3);
+        z-index: 0;
+    }
 
 /* Flyer Section Ajustada */
 .flyer-section {
@@ -99,16 +99,16 @@ html {
     text-align: center;
     background-color: #000;
     padding: var(--spacing-xlarge) 0;
-    height: 100vh;
     position: relative;
 }
 
 .flyer-container {
     width: 100%;
-    height: 100%;
+    height: auto; /* Altura ajustada para que a seção não ocupe 100vh */
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Coloca os vídeos um em cima do outro */
     align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
@@ -116,107 +116,30 @@ html {
         width: 100%;
         height: auto; /* Altura proporcional */
         object-fit: contain; /* Altera para 'contain' para evitar corte */
-        max-height: 90vh; /* Limita a altura máxima do vídeo */
+        max-height: 80vh; /* Limita a altura máxima do vídeo */
         border: none;
         z-index: 1;
     }
 
-
-/* Texto Animado RA.DI.AL (aumentado) */
-.intro .brand-heading {
-    font-size: clamp(3rem, 8vw, 12rem); /* Ajusta tamanho do texto */
-    letter-spacing: 10px; /* Aumenta o espaçamento entre letras */
-    text-transform: uppercase;
-    background: linear-gradient(135deg, #00ffcc, #0072ff);
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: neonGlow 2s infinite alternate;
-    transition: transform 0.3s ease-in-out; /* Transição suave */
-}
-
-.intro:hover .brand-heading {
-    transform: scale(1.05); /* Aumenta ligeiramente no hover */
-}
-
-@keyframes neonGlow {
-    0% {
-        text-shadow: 0 0 15px rgba(0,255,200,0.5), 0 0 30px rgba(0,255,200,0.2);
-    }
-
-    100% {
-        text-shadow: 0 0 30px rgba(0,114,255,1), 0 0 60px rgba(0,255,200,1);
-    }
-}
-
-/* Botão Animado com Sombra e Pulsação */
-.btn-circle {
-    margin-top: var(--spacing-medium);
-    padding: 20px 50px;
-    border: 3px solid #00ffcc;
-    border-radius: 50px;
-    background: transparent;
-    color: #00ffcc;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.5s, color 0.5s, transform 0.5s;
-    animation: pulseBtn 1.5s infinite alternate;
-}
-
-/* Texto Secundário (Música e Arte em Sintonia) */
-.intro .intro-text {
-    font-size: clamp(1rem, 4vw, 3rem); /* Tamanho do texto em telas maiores */
-    margin-top: var(--spacing-medium);
-    color: #fff;
-    opacity: 0;
-    animation: fadeInText 3s forwards 2s; /* Aparece suavemente */
-    transition: opacity 0.5s ease-in-out; /* Transição suave */
-}
-
-@keyframes fadeInText {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Animação de Pulso */
-@keyframes pulseBtn {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 10px rgba(0, 255, 200, 0.6), 0 0 20px rgba(0, 255, 200, 0.4);
-    }
-
-    100% {
-        transform: scale(1.1);
-        box-shadow: 0 0 20px rgba(0, 255, 200, 0.8), 0 0 40px rgba(0, 255, 200, 0.6);
-    }
-}
-
-.btn-circle:hover {
-    background-color: #00ffcc;
-    color: #000;
-    transform: scale(1.2); /* Aumentar ainda mais no hover */
-    box-shadow: 0 0 30px rgba(0, 255, 200, 0.8), 0 0 60px rgba(0, 255, 200, 1);
-}
-
-/* Ajustar os espaços entre as seções */
+/* Ajustes para as seções */
 .content-section {
-    padding: var(--spacing-large) 0; /* Reduzir o padding entre seções */
+    padding: var(--spacing-small) 0; /* Reduzir o padding entre seções */
+}
+
+.about-section,
+.flyer-section,
+.editorial-section {
+    margin-bottom: var(--spacing-small); /* Reduzir o espaço entre seções */
 }
 
 /* Ajuste para tornar o vídeo responsivo */
-.flyer-section .video-responsive {
+.video-responsive {
     width: 100%; /* O vídeo ocupará toda a largura do container */
     height: auto; /* A altura será proporcional à largura */
     max-height: 80vh; /* Limitar a altura máxima do vídeo */
     margin-bottom: 20px; /* Espaçamento entre os vídeos */
     border: 2px solid white; /* Adiciona uma borda branca fina */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar os vídeos */
-    object-fit: contain; /* Altera para 'contain' para evitar corte */
 }
 
 /* Ajustes de responsividade para o cabeçalho e botões */
@@ -278,12 +201,6 @@ html {
     }
 }
 
-@media (min-width: 1600px) {
-    .intro .brand-heading {
-        font-size: 12rem; /* Tamanho extra para telas grandes */
-    }
-}
-
 /* Borda para os vídeos do Instagram */
 .instagram-embed {
     border: 2px solid white; /* Borda branca fina */
@@ -329,42 +246,13 @@ html {
     transform: translate(-50%, -50%); /* Centraliza o vídeo */
 }
 
-.about-section p, 
+.about-section p,
 .editorial-section p {
     font-size: 1.125em; /* Defina o tamanho desejado, ajustando conforme necessário */
-    line-height: 1.6; /* Defina a altura da linha para melhorar a legibilidade */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
 }
 
-/* Flyer Section Ajustada */
-.flyer-section {
-    display: flex;
-    flex-direction: column; /* Coloca os vídeos um em cima do outro */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #000;
-    height: 100vh; /* Faz a seção ocupar toda a altura da janela */
-    position: relative;
-    overflow: hidden; /* Para esconder qualquer conteúdo que ultrapasse */
+/* Transições e Efeitos */
+* {
+    transition: all 0.3s ease; /* Transições suaves para todos os elementos */
 }
-
-/* Container para os vídeos na flyer-section */
-.video-container {
-    display: flex;
-    flex-direction: column; /* Coloca os vídeos um em cima do outro */
-    align-items: center;
-    width: 100%; /* Garante que o container ocupe toda a largura */
-    height: 100%; /* Garante que o container ocupe toda a altura */
-}
-
-.video-responsive {
-    width: 100%; /* O vídeo ocupará toda a largura do container */
-    height: auto; /* A altura será proporcional à largura */
-    max-height: 80vh; /* Limitar a altura máxima do vídeo */
-    margin-bottom: 20px; /* Espaçamento entre os vídeos */
-    border: 2px solid white; /* Adiciona uma borda branca fina */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar os vídeos */
-    object-fit: contain; /* Altera para 'contain' para evitar corte */
-}
-
-
