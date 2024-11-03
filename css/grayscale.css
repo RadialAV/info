@@ -112,14 +112,15 @@ html {
     overflow: hidden;
 }
 
-.flyer-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-height: 100vh;
-    border: none;
-    z-index: 1;
-}
+    .flyer-container video {
+        width: 100%;
+        height: auto; /* Altura proporcional */
+        object-fit: contain; /* Altera para 'contain' para evitar corte */
+        max-height: 90vh; /* Limita a altura máxima do vídeo */
+        border: none;
+        z-index: 1;
+    }
+
 
 /* Texto Animado RA.DI.AL (aumentado) */
 .intro .brand-heading {
@@ -209,10 +210,13 @@ html {
 
 /* Ajuste para tornar o vídeo responsivo */
 .flyer-section .video-responsive {
-    width: 100%;
-    height: auto;
+    width: 100%; /* O vídeo ocupará toda a largura do container */
+    height: auto; /* A altura será proporcional à largura */
     max-height: 80vh; /* Limitar a altura máxima do vídeo */
-    object-fit: cover; /* Garante que o vídeo cubra a área */
+    margin-bottom: 20px; /* Espaçamento entre os vídeos */
+    border: 2px solid white; /* Adiciona uma borda branca fina */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar os vídeos */
+    object-fit: contain; /* Altera para 'contain' para evitar corte */
 }
 
 /* Ajustes de responsividade para o cabeçalho e botões */
@@ -339,8 +343,9 @@ html {
     justify-content: center;
     text-align: center;
     background-color: #000;
-    padding: 40px; /* Aumenta o padding para mais espaço ao redor */
+    height: 100vh; /* Faz a seção ocupar toda a altura da janela */
     position: relative;
+    overflow: hidden; /* Para esconder qualquer conteúdo que ultrapasse */
 }
 
 /* Container para os vídeos na flyer-section */
@@ -349,15 +354,17 @@ html {
     flex-direction: column; /* Coloca os vídeos um em cima do outro */
     align-items: center;
     width: 100%; /* Garante que o container ocupe toda a largura */
-    max-width: 600px; /* Define uma largura máxima para os vídeos */
+    height: 100%; /* Garante que o container ocupe toda a altura */
 }
 
-/* Vídeos responsivos */
 .video-responsive {
     width: 100%; /* O vídeo ocupará toda a largura do container */
     height: auto; /* A altura será proporcional à largura */
+    max-height: 80vh; /* Limitar a altura máxima do vídeo */
     margin-bottom: 20px; /* Espaçamento entre os vídeos */
     border: 2px solid white; /* Adiciona uma borda branca fina */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar os vídeos */
+    object-fit: contain; /* Altera para 'contain' para evitar corte */
 }
+
 
