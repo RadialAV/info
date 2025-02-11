@@ -33,12 +33,57 @@
             font-size: 36px; /* Aumenta o tamanho dos ícones das redes sociais */
             margin: 0 10px; /* Espaço entre os ícones */
         }
+        
+        #youtube-videos .video-container {
+            padding: 20px;
+        }
+        
+        #youtube-videos .video-wrapper {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+        
+        #youtube-videos .video-wrapper:hover {
+            transform: scale(1.02);
+        }
+        
+        @media (min-width: 992px) {
+            #youtube-videos .video-container {
+                padding: 30px;
+            }
+            
+            #youtube-videos .video-wrapper {
+                max-width: 90%;
+            }
+        }
+        
+        /* Ensure videos are larger */
+        #youtube-videos .embed-responsive-16by9 {
+            padding-top: 56.25% !important;
+        }
+
+        /* Increase spacing between sections */
+        body {
+            padding-top: 100px; /* Adjust the top padding to create more space below the fixed navbar */
+        }
+
+        .section-spacing {
+            margin-top: 100px; /* Add significant margin above the YouTube videos section */
+            padding-top: 50px; /* Add padding to create more visual separation */
+        }
+
+        /* Adjust navbar to not interfere with scrolling */
+        .navbar-custom {
+            transition: background-color 0.3s ease;
+        }
     </style>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
- 
+
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -65,55 +110,7 @@
     </nav>
 
 
-      <!-- Download Section (Eventos) -->
-<section id="download" class="content-section text-center">
-    <div class="container">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2>Eventos | Radial</h2>
-            <p>Segue-nos para ficares a par dos nossos próximos eventos.</p>
-            <a href="https://shotgun.live/pt-pt/venues/radial-av" class="btn btn-custom">Join Us</a>
-            <div class="event-card" style="margin: 20px auto; max-width: 400px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                <video style="width: 100%; height: auto;" autoplay muted loop>
-                    <source src="https://res.cloudinary.com/shotgun/video/upload/c_fit,ar_16:9,w_854/ac_none/br_2500000/du_30/f_auto:video/q_auto/production/artworks/Radial_04_V%C3%ADdeo_twpsco.mp4" type="video/mp4">
-                    O teu navegador não suporta o vídeo.
-                </video>
-                <div class="event-info" style="padding: 15px; text-align: center;">
-                    <h3>Radial @ Art Haus Club</h3>
-                    <p>Data: 11 de Janeiro 2025</p>
-                    <p>Local: Art Haus Club, Faro</p>
-                    <a href="https://shotgun.live/events/radial-at-art-haus-club" class="btn btn-custom">Comprar Bilhetes</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
     
-
-        <!-- Terceira seção do flyer -->
-<section class="flyer-section">
-    <div class="image-container" style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; overflow: hidden; margin: 0 auto;">
-        <!-- Imagem clicável que redireciona para o vídeo no YouTube -->
-        <a href="https://youtu.be/-jfIZ2ZBJoQ?si=vjpd7cVusOBM7jMu" target="_blank" rel="noopener noreferrer">
-            <img src="img/radial03.png" alt="Clique para assistir ao vídeo no YouTube"
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-        </a>
-    </div>
-</section>
-
-    
- <!-- Segunda seção do flyer -->
-<section class="flyer-section">
-    <div class="image-container" style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; overflow: hidden; margin: 0 auto;">
-        <!-- Imagem clicável que redireciona para o vídeo no YouTube -->
-        <a href="https://youtu.be/Fw9m9DpW9Q4?si=k1iAwQ_BHIc8z7ol&t=7192" target="_blank" rel="noopener noreferrer">
-            <img src="img/Imagem%20Youtube%20Play.png" alt="Clique para assistir ao vídeo no YouTube"
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-        </a>
-    </div>
-</section>
-
-
     <!-- Primeira seção do flyer -->
     <section class="flyer-section">
         <div class="video-container">
@@ -123,6 +120,34 @@
             </video>
         </div>
     </section>
+
+
+  <!-- YouTube Videos Section -->
+  <section id="youtube-videos" class="container-fluid text-center section-spacing">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-lg-4 col-md-10 offset-md-0 offset-lg-0 mb-5 video-container">
+                    <div class="embed-responsive embed-responsive-16by9 shadow-sm video-wrapper">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Fw9m9DpW9Q4?si=BkRuXQdhaqxaeUmp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-10 offset-md-0 offset-lg-0 mb-5 video-container">
+                    <div class="embed-responsive embed-responsive-16by9 shadow-sm video-wrapper">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-jfIZ2ZBJoQ?si=7EnVQBUThVIO__vc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-10 offset-md-0 offset-lg-0 mb-5 video-container">
+                    <div class="embed-responsive embed-responsive-16by9 shadow-sm video-wrapper">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/urVCCbPbStg?si=djTlRh06Lnl4xXWa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 
 
@@ -175,8 +200,7 @@
         </div>
     </section>
 
-    
-    
+  
 
     <!-- Vídeos do YouTube Section -->
     <section id="youtube-videos" class="container content-section text-center">
@@ -195,7 +219,28 @@
     </section>
 
 
-
+    <!-- Download Section (Eventos) -->
+    <section id="download" class="content-section text-center">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Eventos | Radial</h2>
+                <p>Segue-nos para ficares a par dos nossos próximos eventos.</p>
+                <a href="https://shotgun.live/pt-pt/venues/radial-av" class="btn btn-custom">Join Us</a>
+                <div class="event-card" style="margin: 20px auto; max-width: 400px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                    <video style="width: 100%; height: auto;" autoplay muted loop>
+                        <source src="https://res.cloudinary.com/shotgun/video/upload/c_fit,ar_16:9,w_854/ac_none/br_2500000/du_30/f_auto:video/q_auto/production/artworks/Radial_04_V%C3%ADdeo_twpsco.mp4" type="video/mp4">
+                        O teu navegador não suporta o vídeo.
+                    </video>
+                    <div class="event-info" style="padding: 15px; text-align: center;">
+                        <h3>Radial @ Art Haus Club</h3>
+                        <p>Data: 11 de Janeiro 2025</p>
+                        <p>Local: Art Haus Club, Faro</p>
+                        <a href="https://shotgun.live/events/radial-at-art-haus-club" class="btn btn-custom">Comprar Bilhetes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
