@@ -78,7 +78,43 @@
         .navbar-custom {
             transition: background-color 0.3s ease;
         }
+
+        /* Estilo da seção de eventos */
+        #download {
+            background: #000000;
+            padding: 100px 0;
+            color: white;
+        }
+
+        #download h2 {
+            margin-bottom: 30px;
+            font-size: 36px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        #download p {
+            margin-bottom: 40px;
+            font-size: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        #download .btn-custom {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        #download .btn-custom:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.05);
+        }
     </style>
+    
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -96,7 +132,7 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1370060104420958&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-    
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -131,16 +167,21 @@ src="https://www.facebook.com/tr?id=1370060104420958&ev=PageView&noscript=1"
     <section id="download" class="content-section text-center">
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
-                <a href="https://shotgun.live/pt-pt/venues/radial-av" class="btn btn-custom"></a>
-                <div class="event-card" style="margin: 20px auto; max-width: 800px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                    <img src="https://res.cloudinary.com/shotgun/video/upload/c_fit,ar_16:9,w_854/ac_none/br_2500000/du_30/f_auto:video/q_auto/production/artworks/Video_ShotGun_z7faqh.mp4" alt="Radial Event" style="width: 100%; height: auto;">
-                    <div class="event-info" style="padding: 15px; text-align: center;">
-                        <h3>Radial @ Art Haus Club</h3>
-                        <p>Data: 12 de Abril 2025</p>
-                        <p>Local: Art Haus Club, Faro</p>
-                        <a href="https://shotgun.live/pt-pt/events/radial-art-haus-clubbb" class="btn btn-custom" onclick="fbq('track', 'Lead');">Comprar Bilhetes</a>
-                    </div>
-                </div>
+                <h2>Eventos | Radial</h2>
+                <p>Descobre todos os nossos eventos e garante o teu lugar na pista.</p>
+                <script>window.__shotgun={"events-listing":{"organizerId":208547,"layout":"shotgun","showEventTags":true,"showEventState":true}}</script>
+                <style>
+                    body #shotgun-events-listing {
+                        --shotgun-muted: transparent;
+                        --shotgun-accent: transparent;
+                        --shotgun-accent-foreground: #ffffff;
+                        --shotgun-border: transparent;
+                        --shotgun-foreground: #ffffff;
+                        --shotgun-background: transparent;
+                    }
+                </style>
+                <section id="shotgun-events-listing"></section>
+                <script src="https://widgets.shotgun.live/events-listing.js"></script>
             </div>
         </div>
     </section>
@@ -255,29 +296,6 @@ src="https://www.facebook.com/tr?id=1370060104420958&ev=PageView&noscript=1"
     </section>
 
 
-    <!-- Download Section (Eventos) -->
-    <section id="download" class="content-section text-center">
-        <div class="container">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Eventos | Radial</h2>
-                <p>Segue-nos para ficares a par dos nossos próximos eventos.</p>
-                <a href="https://shotgun.live/pt-pt/venues/radial-av" class="btn btn-custom">Join Us</a>
-                <div class="event-card" style="margin: 20px auto; max-width: 400px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                    <img src="https://res.cloudinary.com/shotgun/image/upload/c_limit,ar_16:9,w_750/fl_lossy/f_auto/q_auto/production/artworks/ShotGun_otawxo.png" alt="Radial Event" style="width: 100%; height: auto;">
-                    <div class="event-info" style="padding: 15px; text-align: center;">
-                        <h3>Radial @ Art Haus Club</h3>
-                        <p>Data: 12 de Abril 2025</p>
-                        <p>Local: Art Haus Club, Faro</p>
-                        <a href="https://shotgun.live/pt-pt/events/radial-art-haus-clubb" class="btn btn-custom">Comprar Bilhetes</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
     <!-- Editora Section -->
     <section id="editorial" class="container content-section text-center">
         <div class="row">
@@ -350,6 +368,7 @@ src="https://www.facebook.com/tr?id=1370060104420958&ev=PageView&noscript=1"
 
     <!-- Custom JavaScript -->
     <script src="js/grayscale.js"></script>
+
 
 </body>
 
