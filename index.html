@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SoCust Bar @ MED Festival 2026</title>
+  <meta name="description" content="SoCust Bar no MED Festival — programação especial 25-28 Junho, Loulé." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #090506;
+      color: #fff;
+      line-height: 1.4;
+      min-height: 100vh;
+    }
+    .container { max-width: 520px; margin: 0 auto; padding: 0 20px; }
+
+    .hero {
+      background: linear-gradient(180deg, #090506 0%, #1a0a0e 50%, #4a1019 100%);
+      text-align: center;
+      padding: 60px 20px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%; width: 200%; height: 200%;
+      background: radial-gradient(circle at 50% 0%, rgba(215,169,88,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-logo { font-size: 14px; letter-spacing: 4px; text-transform: uppercase; color: #d7a958; margin-bottom: 8px; }
+    .hero-title { font-size: 42px; font-weight: 800; color: #fff; line-height: 1.1; }
+    .hero-title span { color: #d7a958; }
+    .hero-sub { font-size: 18px; color: #ccc; margin: 12px 0 6px; }
+    .hero-dates { font-size: 16px; color: #d7a958; font-weight: 600; letter-spacing: 1px; }
+    .badge {
+      display: inline-block; background: #4a1019; color: #d7a958;
+      padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-top: 16px; letter-spacing: 1px;
+    }
+
+    .section { padding: 40px 0; }
+    .section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; color: #d7a958; text-align: center; }
+
+    .lineup-list { display: flex; flex-direction: column; gap: 12px; }
+    .lineup-item {
+      background: #1a0a0e; border: 1px solid rgba(215,169,88,0.15); border-radius: 12px;
+      padding: 16px 20px; display: flex; justify-content: space-between; align-items: center;
+    }
+    .lineup-name { font-size: 18px; font-weight: 600; }
+    .lineup-tag { font-size: 12px; padding: 4px 12px; border-radius: 20px; background: rgba(215,169,88,0.1); color: #d7a958; border: 1px solid rgba(215,169,88,0.3); }
+
+    .curation { text-align: center; margin: 24px 0 0; padding: 16px; background: rgba(74,16,25,0.4); border-radius: 12px; border: 1px solid rgba(215,169,88,0.15); }
+    .curation p { font-size: 14px; color: #bbb; }
+    .curation strong { color: #d7a958; }
+
+    .info-card { background: #1a0a0e; border: 1px solid rgba(215,169,88,0.15); border-radius: 12px; padding: 20px; margin-top: 20px; }
+    .info-card h3 { font-size: 16px; color: #d7a958; margin-bottom: 8px; }
+    .info-card p { font-size: 15px; color: #ccc; line-height: 1.5; }
+    .info-card p strong { color: #fff; }
+
+    .map-container { margin: 20px 0; border-radius: 12px; overflow: hidden; }
+    .map-container iframe { width: 100%; height: 220px; border: none; display: block; }
+
+    .address-box { background: #1a0a0e; border: 1px solid rgba(215,169,88,0.15); border-radius: 12px; padding: 18px 20px; text-align: center; margin-top: 12px; }
+    .address-box p { font-size: 16px; font-weight: 600; color: #fff; }
+    .address-box small { font-size: 13px; color: #888; }
+    .address-box a { display: inline-block; margin-top: 10px; color: #d7a958; text-decoration: none; font-size: 14px; font-weight: 600; padding: 8px 20px; border: 1px solid #d7a958; border-radius: 20px; }
+    .address-box a:hover { background: #d7a958; color: #090506; }
+
+    .social { text-align: center; padding: 40px 0; }
+[25/06/2026 22:37] SoCust Bar: .social a { display: inline-block; color: #d7a958; text-decoration: none; font-size: 16px; font-weight: 600; padding: 12px 28px; border: 1px solid #d7a958; border-radius: 24px; margin: 6px; }
+    .social a:hover { background: #d7a958; color: #090506; }
+
+    .footer { text-align: center; padding: 30px 0 40px; font-size: 12px; color: #555; }
+    .footer a { color: #888; text-decoration: none; }
+
+    @media (max-width: 400px) {
+      .hero-title { font-size: 34px; }
+      .lineup-item { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .lineup-name { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-logo">SoCust Bar</div>
+    <h1 class="hero-title">MED <span>Festival</span></h1>
+    <p class="hero-sub">Programação Especial</p>
+    <p class="hero-dates">25 → 28 JUN · 15h → 02h</p>
+    <div class="badge">FREE ENTRY</div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h2 class="section-title">🎧 LINE-UP</h2>
+      <div class="lineup-list">
+        <div class="lineup-item"><span class="lineup-name">Axis Uno</span><span class="lineup-tag">DJ Set</span></div>
+        <div class="lineup-item"><span class="lineup-name">Khalil Suleman</span><span class="lineup-tag">DJ Set</span></div>
+        <div class="lineup-item"><span class="lineup-name">Daniel Nekrashevich</span><span class="lineup-tag">DJ Set</span></div>
+        <div class="lineup-item"><span class="lineup-name">Djuzen</span><span class="lineup-tag">DJ Set</span></div>
+        <div class="lineup-item"><span class="lineup-name">Lofty Music</span><span class="lineup-tag">DJ Set</span></div>
+        <div class="lineup-item"><span class="lineup-name">Alexis</span><span class="lineup-tag">🎸 Live Guitar</span></div>
+      </div>
+      <div class="curation">
+        <p>Curadoria <strong>Radial AV</strong> × <strong>Ilektronik Sangeet</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top: 0;">
+    <div class="container">
+      <h2 class="section-title">📍 LOCALIZAÇÃO</h2>
+
+      <div class="map-container">
+        <iframe
+          src="https://maps.google.com/maps?q=Rua+Dr+Joaquim+Nunes+Saraiva+19+Loul%C3%A9&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="address-box">
+        <p>Rua Dr. Joaquim Nunes Saraiva, 19–21</p>
+        <small>Centro Histórico · 8100-681 Loulé</small><br />
+        <small>📍 Dentro do recinto do MED Festival</small><br />
+        <a href="https://maps.google.com/?q=Rua+Dr+Joaquim+Nunes+Saraiva+19+Loul%C3%A9" target="_blank">Abrir no Google Maps</a>
+      </div>
+
+      <div class="info-card">
+        <h3>ℹ️ Sobre</h3>
+        <p>O SoCust transforma-se num <strong>MiniClub</strong> com dancefloor durante o MED Festival. Mesas dão lugar à pista — música eletrónica, live guitar e boa energia do início ao fim.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>⏰ Horário</h3>
+        <p><strong>25 → 28 Junho</strong> · 15h → 02h</p>
+        <p><strong>Entrada gratuita</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="social">
+    <div class="container">
+      <a href="https://www.instagram.com/socustbar/" target="_blank">📷 @socustbar</a>
+      <a href="https://socustbar.com" target="_blank">🌐 socustbar.com</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <p>SoCust Bar · Loulé</p>
+    </div>
+  </div>
+
+</body>
+</html>
+``
+
+🟢 **O que mudou:**
+- Mapa **OpenStreetMap** → **Google Maps** com marcador na Rua Dr. Joaquim Nunes Saraiva
+- Botão "Abrir no Google Maps" continua a abrir no Maps
+- O mapa carrega interativo no browser 👍
+
+**É copiar este código para o index.html` e carregar no GitHub!** 💪
+[25/06/2026 22:46] Axis Uno // Yo Rawcutz: https://radialav.github.io/info/
+
+
+ja carregeuei o idnex.html e da erro, mas quando abro no desktop ele corre na boa
+[25/06/2026 22:48] SoCust Bar: ```html
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SoCust Bar @ MED Festival 2026</title>
+  <meta name="description" content="SoCust Bar no MED Festival — programação especial 25-28 Junho, Loulé. Dancefloor, DJs, live music." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #090506;
+      color: #fff;
+      line-height: 1.4;
+      min-height: 100vh;
+    }
+    .container { max-width: 520px; margin: 0 auto; padding: 0 20px; }
+    .hero {
+      background: linear-gradient(180deg, #090506 0%, #1a0a0e 50%, #4a1019 100%);
+      text-align: center;
+      padding: 60px 20px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%; width: 200%; height: 200%;
+      background: radial-gradient(circle at 50% 0%, rgba(215,169,88,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-logo { font-size: 14px; letter-spacing: 4px; text-transform: uppercase; color: #d7a958; margin-bottom: 8px; }
+    .hero-title { font-size: 42px; font-weight: 800; color: #fff; line-height: 1.1; }
+    .hero-title span { color: #d7a958; }
+    .hero-sub { font-size: 18px; color: #ccc; margin: 12px 0 6px; }
+    .hero-dates { font-size: 16px; color: #d7a958; font-weight: 600; letter-spacing: 1px; }
+    .badge {
+      display: inline-block; background: #4a1019; color: #d7a958;
+      padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-top: 16px; letter-spacing: 1px;
+    }
+    .section { padding: 40px 0; }
+    .section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; color: #d7a958; text-align: center; }
+    .lineup-list { display: flex; flex-direction: column; gap: 12px; }
+    .lineup-item {
+      background: #1a0a0e; border: 1px solid rgba(215,169,88,0.15); border-radius: 12px;
+      padding: 16px 20px; display: flex; justify-content: space-between; align-items: center;
+    }
+    .lineup-name { font-size: 18px; font-weight: 600; }
+    .lineup-tag { font-size: 12px; padding: 4px 12px; border-radius: 20px; background: rgba(215,169,88,0.1); color: #d7a958; border: 1px solid rgba(215,169,88,0.3); }
+    .curation { text-align: center; margin: 24px 0 0; padding: 16px; background: rgba(74,16,25,0.4); border-radius: 12px; border: 1px solid rgba(215,169,88,0.15); }
+    .curation p { font-size: 14px; color: #bbb; }
+    .curation strong { color: #d7a958; }
+    .info-card { background: #1a0a0e; border: 1px solid rgba(215,169,88,0.15); border-radius: 12px; padding: 20px; margin-top: 20px; }
+    .info-card h3 { font-size: 16px; color: #d7a958; margin-bottom: 8px; }
+    .info-card p { font-size: 15px; color: #ccc; line-height: 1.5; }
+    .info-card p strong { color: #fff; }
+    .map-container { margin: 20px 0; border-radius: 12px; overflow: hidden; }
+    .map-container iframe { width: 100%; height: 220px; border: none; display: block; }
+    .address-box { background: #1a0a0e; border: 1px solid rgba(215,169,88,0.15); border-radius: 12px; padding: 18px 20px; text-align: center; margin-top: 12px; }
+    .address-box p { font-size: 16px; font-weight: 600; color: #fff; }
+    .address-box small { font-size: 13px; color: #888; }
+    .address-box a { display: inline-block; margin-top: 10px; color: #d7a958; text-decoration: none; font-size: 14px; font-weight: 600; padding: 8px 20px; border: 1px solid #d7a958; border-radius: 20px; }
+    .address-box a:hover { background: #d7a958; color: #090506; }
+    .social { text-align: center; padding: 40px 0; }
+    .social a { display: inline-block; color: #d7a958; text-decoration: none; font-size: 16px; font-weight: 600; padding: 12px 28px; border: 1px solid #d7a958; border-radius: 24px; margin: 6px; }
+[25/06/2026 22:48] SoCust Bar: .social a:hover { background: #d7a958; color: #090506; }
+    .footer { text-align: center; padding: 30px 0 40px; font-size: 12px; color: #555; }
+    .footer a { color: #888; text-decoration: none; }
+    @media (max-width: 400px) {
+      .hero-title { font-size: 34px; }
+      .lineup-item { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .lineup-name { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-logo">SoCust Bar</div>
+    <h1 class="hero-title">MED <span>Festival</span></h1>
+    <p class="hero-sub">Programação Especial</p>
+    <p class="hero-dates">25 → 28 JUN · 15h → 02h</p>
+    <div class="badge">FREE ENTRY</div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h2 class="section-title">🎧 LINE-UP</h2>
+      <div class="lineup-list">
+        <div class="lineup-item"><span class="lineup-name">Axis Uno</span><span class="lineup-tag">DJ Set</span></div>
+        <div class="lineup-item"><span class="lineup-name">Khalil Suleman</span><span class="lineup-tag">DJ Set</span></div>
+        <div class="lineup-item"><span class="lineup-name">Daniel Nekrashevich</span><span class="lineup-tag">DJ Set</span></div>
+        <div class="lineup-item"><span class="lineup-name">Djuzen</span><span class="lineup-tag">DJ Set</span></div>
+        <div class="lineup-item"><span class="lineup-name">Lofty Music</span><span class="lineup-tag">DJ Set</span></div>
+        <div class="lineup-item"><span class="lineup-name">Alexis</span><span class="lineup-tag">🎸 Live Guitar</span></div>
+      </div>
+      <div class="curation">
+        <p>Curadoria <strong>Radial AV</strong> × <strong>Ilektronik Sangeet</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top: 0;">
+    <div class="container">
+      <h2 class="section-title">📍 LOCALIZAÇÃO</h2>
+
+      <div class="map-container">
+        <iframe src="https://maps.google.com/maps?q=Rua+Dr+Joaquim+Nunes+Saraiva+19+Loul%C3%A9&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="address-box">
+        <p>Rua Dr. Joaquim Nunes Saraiva, 19–21</p>
+        <small>Centro Histórico · 8100-681 Loulé</small><br />
+        <small>📍 Dentro do recinto do MED Festival</small><br />
+        <a href="https://maps.google.com/?q=Rua+Dr+Joaquim+Nunes+Saraiva+19+Loul%C3%A9" target="_blank">Abrir no Google Maps</a>
+      </div>
+
+      <div class="info-card">
+        <h3>ℹ️ Sobre</h3>
+        <p>O SoCust transforma-se num <strong>MiniClub</strong> com dancefloor durante o MED Festival. Mesas dão lugar à pista — música eletrónica, live guitar e boa energia do início ao fim.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>⏰ Horário</h3>
+        <p><strong>25 → 28 Junho</strong> · 15h → 02h</p>
+        <p><strong>Entrada gratuita</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="social">
+    <div class="container">
+      <a href="https://www.instagram.com/socustbar/" target="_blank">📷 @socustbar</a>
+      <a href="https://socustbar.com" target="_blank">🌐 socustbar.com</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <p>SoCust Bar · Loulé</p>
+    </div>
+  </div>
+
+</body>
+</html>
+
